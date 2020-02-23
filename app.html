@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Application</title>
+    <link href="app.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>SUDOKU SOLVER</h1>
+    <table align="center" id="table">
+        <tr>
+            <td> <input maxlength="1" value="0" id="zz"> </td>
+            <!-- if they left it empty we consider the cell as 0 ,by setting the value -->
+            <td> <input maxlength="1" value="0" id="zo"> </td>
+            <td class="third-right"> <input maxlength="1" value="0" id="zt"> </td>
+            <td> <input maxlength="1" value="0" id="zth"> </td>
+            <td> <input maxlength="1" value="0" id="zf"> </td>
+            <td class="third-right"> <input maxlength="1" value="0" id="zfi"> </td>
+            <td> <input maxlength="1" value="0" id="zs"> </td>
+            <td> <input maxlength="1" value="0" id="zse"> </td>
+            <td> <input maxlength="1" value="0" id="ze"> </td>
+        </tr>
+        <tr>
+            <td> <input maxlength="1" value="0" id="oz"> </td>
+            <td> <input maxlength="1" value="0" id="oo"> </td>
+            <td class="third-right"> <input maxlength="1" value="0" id="ot"> </td>
+            <td> <input maxlength="1" value="0" id="oth"> </td>
+            <td> <input maxlength="1" value="0" id="of"> </td>
+            <td class="third-right"> <input maxlength="1" value="0" id="ofi"> </td>
+            <td> <input maxlength="1" value="0" id="os"> </td>
+            <td> <input maxlength="1" value="0" id="ose"> </td>
+            <td> <input maxlength="1" value="0" id="oe"> </td>
+        </tr>
+        <tr class="third-bottom">
+            <td> <input maxlength="1" value="0" id="tz"> </td>
+            <td> <input maxlength="1" value="0" id="to"> </td>
+            <td class="third-right"> <input maxlength="1" value="0" id="tt"> </td>
+            <td> <input maxlength="1" value="0" id="tth"> </td>
+            <td> <input maxlength="1" value="0" id="tf"> </td>
+            <td class="third-right"> <input maxlength="1" value="0" id="tfi"> </td>
+            <td> <input maxlength="1" value="0" id="ts"> </td>
+            <td> <input maxlength="1" value="0" id="tse"> </td>
+            <td> <input maxlength="1" value="0" id="te"> </td>
+        </tr>
+        <tr>
+            <td> <input maxlength="1" value="0" id="thz"> </td>
+            <td> <input maxlength="1" value="0" id="tho"> </td>
+            <td class="third-right"> <input maxlength="1" value="0" id="tht"> </td>
+            <td> <input maxlength="1" value="0" id="thth"> </td>
+            <td> <input maxlength="1" value="0" id="thf"> </td>
+            <td class="third-right"> <input maxlength="1" value="0" id="thfi"> </td>
+            <td> <input maxlength="1" value="0" id="ths"> </td>
+            <td> <input maxlength="1" value="0" id="thse"> </td>
+            <td> <input maxlength="1" value="0" id="the"> </td>
+        </tr>
+        <tr>
+            <td> <input maxlength="1" value="0" id="fz"> </td>
+            <td> <input maxlength="1" value="0" id="fo"> </td>
+            <td class="third-right"> <input maxlength="1" value="0" id="ft"> </td>
+            <td> <input maxlength="1" value="0" id="fth"> </td>
+            <td> <input maxlength="1" value="0" id="ff"> </td>
+            <td class="third-right"> <input maxlength="1" value="0" id="ffi"> </td>
+            <td> <input maxlength="1" value="0" id="fs"> </td>
+            <td> <input maxlength="1" value="0" id="fse"> </td>
+            <td> <input maxlength="1" value="0" id="fe"> </td>
+        </tr>
+        <tr class="third-bottom">
+            <td> <input maxlength="1" value="0" id="fiz"> </td>
+            <td> <input maxlength="1" value="0" id="fio"> </td>
+            <td class="third-right"> <input maxlength="1" value="0" id="fit"> </td>
+            <td> <input maxlength="1" value="0" id="fith"> </td>
+            <td> <input maxlength="1" value="0" id="fif"> </td>
+            <td class="third-right"> <input maxlength="1" value="0" id="fifi"> </td>
+            <td> <input maxlength="1" value="0" id="fis"> </td>
+            <td> <input maxlength="1" value="0" id="fise"> </td>
+            <td> <input maxlength="1" value="0" id="fie"> </td>
+        </tr>
+        <tr>
+            <td> <input maxlength="1" value="0" id="sz"> </td>
+            <td> <input maxlength="1" value="0" id="so"> </td>
+            <td class="third-right"> <input maxlength="1" value="0" id="st"> </td>
+            <td> <input maxlength="1" value="0" id="sth"> </td>
+            <td> <input maxlength="1" value="0" id="sf"> </td>
+            <td class="third-right"> <input maxlength="1" value="0" id="sfi"> </td>
+            <td> <input maxlength="1" value="0" id="ss"> </td>
+            <td> <input maxlength="1" value="0" id="sse"> </td>
+            <td> <input maxlength="1" value="0" id="se"> </td>
+        </tr>
+        <tr>
+            <td> <input maxlength="1" value="0" id="sez"> </td>
+            <td> <input maxlength="1" value="0" id="seo"> </td>
+            <td class="third-right"> <input maxlength="1" value="0" id="set"> </td>
+            <td> <input maxlength="1" value="0" id="seth"> </td>
+            <td> <input maxlength="1" value="0" id="sef"> </td>
+            <td class="third-right"> <input maxlength="1" value="0" id="sefi"> </td>
+            <td> <input maxlength="1" value="0" id="ses"> </td>
+            <td> <input maxlength="1" value="0" id="sese"> </td>
+            <td> <input maxlength="1" value="0" id="see"> </td>
+        </tr>
+        <tr>
+            <td> <input maxlength="1" value="0" id="ez"> </td>
+            <td> <input maxlength="1" value="0" id="eo"> </td>
+            <td class="third-right"> <input maxlength="1" value="0" id="et"> </td>
+            <td> <input maxlength="1" value="0" id="eth"> </td>
+            <td> <input maxlength="1" value="0" id="ef"> </td>
+            <td class="third-right"> <input maxlength="1" value="0" id="efi"> </td>
+            <td> <input maxlength="1" value="0" id="es"> </td>
+            <td> <input maxlength="1" value="0" id="ese"> </td>
+            <td> <input maxlength="1" value="0" id="ee"> </td>
+        </tr>
+    </table>
+
+    <p> <button id="btn" class="btn">
+    SOLVE
+</button></p>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
